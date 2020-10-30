@@ -15,16 +15,10 @@ const topicsDiv = document.querySelector('.topics')
 axios.get('https://lambda-times-api.herokuapp.com/topics')
     .then((res) => {
 
-        // console.log(res);
-
         const topicsApi = res.data
 
-        // console.log(topicsApi);
-
-       topicsApi.topics.forEach(item => {
+        topicsApi.topics.forEach(item => {
            
-        // console.log(item);
-
         const topicItem = document.createElement('div')
             topicItem.classList.add('tab')
             topicItem.textContent = item

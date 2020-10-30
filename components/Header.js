@@ -16,33 +16,24 @@ const headerHTML = document.querySelector('.header-container')
 function headerFunc() {
     
     const headerDiv = document.createElement('div')
-    headerDiv.classList.add('header')
-    
-        const dateSpan = document.createElement('span')
-            dateSpan.classList.add('date')
-            dateSpan.textContent = `MARCH 28, 2020`
+        headerDiv.classList.add('header')
         
-        const lambdaTimesh1 = document.createElement('h1')
-            lambdaTimesh1.textContent = `Lambda Times`
-        
-        const tempSpan = document.createElement('span')
-            tempSpan.textContent = `98°`
+            const dateSpan = document.createElement('span')
+                dateSpan.classList.add('date')
+                dateSpan.textContent = `MARCH 28, 2020`
+            
+            const lambdaTimesh1 = document.createElement('h1')
+                lambdaTimesh1.textContent = `Lambda Times`
+            
+            const tempSpan = document.createElement('span')
+                tempSpan.classList.add('temp')
+                tempSpan.textContent = `98°`
     
     headerDiv.appendChild(dateSpan)
     headerDiv.appendChild(lambdaTimesh1)
     headerDiv.appendChild(tempSpan)
     
     headerHTML.appendChild(headerDiv)
-    
 }
 
-console.log(headerFunc());
-
-// const headerProduct = Header()
-
-// console.log(header());
-
-// headerHTML.appendChild(headerProduct)
-
-
-// console.log(headerHTML);
+headerFunc()

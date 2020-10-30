@@ -28,14 +28,8 @@ axios.get('https://lambda-times-api.herokuapp.com/articles')
 
         const test = res.data
 
-        // console.log(test, 'first log');
-
-        // console.log(test.articles, 'second log');
-
         test.articles.bootstrap.forEach(articleData => {
             
-            // console.log(articleData);
-
            const articleCard = cardComponent(articleData) 
 
             cardHTML.appendChild(articleCard)
@@ -44,8 +38,6 @@ axios.get('https://lambda-times-api.herokuapp.com/articles')
 
         test.articles.javascript.forEach(articleData => {
             
-            // console.log(articleData);
-
             const articleCard = cardComponent(articleData) 
 
             cardHTML.appendChild(articleCard)
@@ -54,8 +46,6 @@ axios.get('https://lambda-times-api.herokuapp.com/articles')
 
         test.articles.jquery.forEach(articleData => {
             
-            // console.log(articleData);
-
             const articleCard = cardComponent(articleData) 
 
             cardHTML.appendChild(articleCard)
@@ -64,8 +54,6 @@ axios.get('https://lambda-times-api.herokuapp.com/articles')
 
         test.articles.node.forEach(articleData => {
             
-            // console.log(articleData);
-
             const articleCard = cardComponent(articleData) 
 
             cardHTML.appendChild(articleCard)
@@ -74,8 +62,6 @@ axios.get('https://lambda-times-api.herokuapp.com/articles')
 
         test.articles.technology.forEach(articleData => {
             
-            // console.log(articleData);
-
             const articleCard = cardComponent(articleData) 
 
             cardHTML.appendChild(articleCard)
@@ -83,7 +69,6 @@ axios.get('https://lambda-times-api.herokuapp.com/articles')
         });
 
     }).catch(err => console.log(err));
-
 
 function cardComponent(objectData) {
 
@@ -115,5 +100,5 @@ function cardComponent(objectData) {
             imgcontainerDiv.appendChild(authorImg)
         authorDiv.appendChild(nameSpan)
 
-        return cardDiv        
+    return cardDiv        
 }
