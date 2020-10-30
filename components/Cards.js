@@ -82,7 +82,7 @@ axios.get('https://lambda-times-api.herokuapp.com/articles')
 
         });
 
-    })
+    }).catch(err => console.log(err));
 
 
 function cardComponent(objectData) {
