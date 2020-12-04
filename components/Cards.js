@@ -26,48 +26,28 @@ const cardHTML = document.querySelector('.cards-container')
 axios.get('https://lambda-times-api.herokuapp.com/articles')
     .then((res) => {
 
-        const test = res.data
+        const articles = res.data.articles
 
-        test.articles.bootstrap.forEach(articleData => {
+        console.log(articles);
+
+        const key = Object.keys(articles)
+
+        console.log(key);
+
+        key.forEach(index => {
+
+            console.log(articles[index]);
             
-           const articleCard = cardComponent(articleData) 
+            articles[index].forEach(cardData => {
 
-            cardHTML.appendChild(articleCard)
+                console.log(cardData);
 
+                const cardInfo = cardComponent(cardData)
+
+                cardHTML.appendChild(cardInfo)
+
+            })
         });
-
-        test.articles.javascript.forEach(articleData => {
-            
-            const articleCard = cardComponent(articleData) 
-
-            cardHTML.appendChild(articleCard)
-
-        });
-
-        test.articles.jquery.forEach(articleData => {
-            
-            const articleCard = cardComponent(articleData) 
-
-            cardHTML.appendChild(articleCard)
-
-        });
-
-        test.articles.node.forEach(articleData => {
-            
-            const articleCard = cardComponent(articleData) 
-
-            cardHTML.appendChild(articleCard)
-
-        });
-
-        test.articles.technology.forEach(articleData => {
-            
-            const articleCard = cardComponent(articleData) 
-
-            cardHTML.appendChild(articleCard)
-
-        });
-
     }).catch(err => console.log(err));
 
 function cardComponent(objectData) {
